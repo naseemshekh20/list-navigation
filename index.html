@@ -3,32 +3,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <script src="https://stacksnippets.net/scripts/snippet-javascript-console.min.js"></script>
   
-<script>
-var listElm = document.querySelector('ul');
 
-// mark the first child (by using "focus")
-listElm.firstElementChild.focus();
-
-// event listener
-window.addEventListener('keydown', onKeyDown);
-
-// event callback
-function onKeyDown(e){
-  e.preventDefault();
-  
-  var selectedElm = document.activeElement,
-      // map actions to event's key
-      action = {ArrowUp:"previous", Up:"previous", ArrowDown:"next", Down:"next"}
-  
-  selectedElm = selectedElm[action[e.key] + "ElementSibling"];
-
-  // loop when reached the top or bottom edge
-  if( !selectedElm )
-    selectedElm = listElm.children[e.key == 'ArrowUp' || e.key == 'Up' ? listElm.children.length - 1 : 0];
-  
-  selectedElm.focus();
-}
-</script>
 
 
 <style>
@@ -55,7 +30,32 @@ li:focus{
 </head>
 
 <body>
+<script type="text/javascript">
+        var listElm = document.querySelector('ul');
 
+// mark the first child (by using "focus")
+listElm.firstElementChild.focus();
+
+// event listener
+window.addEventListener('keydown', onKeyDown);
+
+// event callback
+function onKeyDown(e){
+  e.preventDefault();
+  
+  var selectedElm = document.activeElement,
+      // map actions to event's key
+      action = {ArrowUp:"previous", Up:"previous", ArrowDown:"next", Down:"next"}
+  
+  selectedElm = selectedElm[action[e.key] + "ElementSibling"];
+
+  // loop when reached the top or bottom edge
+  if( !selectedElm )
+    selectedElm = listElm.children[e.key == 'ArrowUp' || e.key == 'Up' ? listElm.children.length - 1 : 0];
+  
+  selectedElm.focus();
+}
+    </script>
 <ul>
   <li tabIndex="-1">item 1</li>
   <li tabIndex="-1">item 2</li>
