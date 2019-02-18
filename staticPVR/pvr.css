@@ -1,0 +1,480 @@
+body {
+    font-family: Arial;
+    color: #fff;
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+    /*background: #6A6A6A url('antclient://clas@theme/library/css/themes/clas/images/1280_720/generic_rtn_background.jpg') no-repeat center top;    */
+    background: #6A6A6A url('icons/1280_720/generic_rtn_background.jpg') no-repeat center top;
+}
+
+body > div.list {
+    position: absolute;
+    width: 1150px;
+    height: 655px;
+    margin: 50px 70px auto;
+    overflow: hidden;
+}
+
+.widget_header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    vertical-align: middle;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+
+.widget_header > span.title {
+    position: absolute;
+    top: 14px;
+    left: 335px;
+    font-size: 25px;
+    color: #f1f1f1;
+    /*opacity: 0.6;*/
+    padding-left:0px !important;
+    margin-left: 0px !important;
+}
+
+.widget_header > span.hintbar {
+    display: inline-block;
+    padding: 0;
+    margin-right: 75px;
+    /*margin-top: 14px;*/
+    top: 0;
+    height: 65px;
+    width: auto;
+    line-height: 65px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+.widget_header > span.hintbar > ul > li > span.key-c-icon:before {
+    background-image: url('icons/1280_720/key-c-icon.png');
+}
+
+.widget_header > span.hintbar > ul > li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget_header > span.hintbar > ul > li > span:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 21px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+/*#PVR_View_List {
+    display: none;
+}
+
+/* list screen active 
+#PVR_View_List.active {
+    display: block;
+}*/
+
+/* list screen title */
+#PVR_View_List > div.domTitleContainer {
+    margin: 54px 0 46px 0;
+    height: 38px;
+}
+
+#PVR_View_List > div.domTitleContainer > span.domTitle {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 38px;
+    color: #f1f1f1;
+}
+
+#PVR_View_List > div.domTitleContainer > span.domSubTitle {
+    margin-left: 15px;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20px;
+    color: #8e8e8e;
+}
+
+/* grid container */
+#PVR_View_List > div.grid-widget-container {
+    width: 805px;
+    height: 490px;
+/*overflow:hidden;*/
+    overflow: scroll;
+    overflow-x: hidden; 
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+    /* ensure the stb highlight is off for all elements... will this perform badly? */
+    -ant-highlight-color: transparent;
+}
+
+
+/* empty list message */
+#PVR_View_List > div.empty-list-container ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+/* scroll bar container */
+#PVR_View_List > div.scroll-bar-container {
+    position: absolute;
+    width: 5px;
+    height: 484px;
+    top: 138px;
+    left: 805px;
+}
+
+
+.grid > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.grid > ul > li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/* list card */
+
+div.list-card-widget {
+    position: relative;
+    background-color: rgba(241, 241, 241, 0.06); /* initial opacity was 10% */
+    margin: 0;
+    padding: 0;
+    width: 796px;
+    margin-bottom: 9px;
+    box-sizing: content-box;
+}
+
+div.list-card-widget.highlight {
+    background-color: rgba(241, 241, 241, 0.1); /* original opacity was 6% */
+}
+
+div.list-card-widget.expanded {
+}
+
+div.list-card-widget > div.divHeader {
+    position: relative;
+    height: 43px;
+    min-height: 43px;
+    max-height: 43px;
+    padding: 15px 20px 0 20px;
+    box-sizing: inherit;
+}
+
+div.list-card-widget > div.divHeader > div.divTopRow {
+    margin-top: -2px;
+    width: 756px;
+    height: 24px;
+    max-height: 24px;
+    min-height: 24px;
+}
+
+div.list-card-widget > div.divHeader > div.divTopRow > div.domTitle {
+    font-family: Arial;
+    font-size: 22px;
+    line-height: 22px;
+    color: #ebebeb;
+    margin-top: -2px;
+    height: 24px;
+    max-height: 24px;
+    min-height: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.list-card-widget > div.divHeader > div.divTopRow > div.domRecordingIcon {
+    float: right;
+    width: 18px;
+    height: 17px;
+    background: url("icons/1280_720/v2/record-once.png") no-repeat center;
+    margin-left: 10px;
+    display: none;
+}
+
+div.list-card-widget.isRecording > div.divHeader > div.divTopRow > div.domRecordingIcon {
+    display: block;
+}
+
+div.list-card-widget > div.divHeader > div.divTopRow > div.domMultiRecordingIcon {
+    float: right;
+    width: 25px;
+    height: 17px;
+    background: url("icons/1280_720/v2/record-once.png") no-repeat center;
+    margin-left: 10px;
+    display: none;
+}
+
+div.list-card-widget.isRecording > div.divHeader > div.divTopRow > div.domMultiRecordingIcon {
+    display: block;
+}
+
+div.list-card-widget > div.divHeader > div.divTopRow > div.domNewIndicator {
+    float: right;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffc04f;
+    margin-left: 10px;
+    display: none;
+}
+
+div.list-card-widget.isNew > div.divHeader > div.divTopRow > div.domNewIndicator {
+    display: block;
+}
+
+div.list-card-widget > div.divHeader > div.divTopRow > div.domAssetCountIndicator {
+    float: right;
+    font-family: Arial;
+    font-size: 18px;
+    margin-left: 10px;
+    color: #f1f1f1;
+    display: block;
+}
+
+div.list-card-widget.isNew > div.divHeader > div.divTopRow > div.domAssetCountIndicator {
+    display: none;
+}
+
+div.list-card-widget > div.divHeader > .domDetailsIconsWrapper {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: -2px;
+    left: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+div.list-card-widget > div.divHeader > .domDetailsIconsWrapper > span.domDetailsContainer {
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 20px;
+    color: #8e8e8e;
+    margin-right: 18px;
+    display: none;
+}
+
+div.list-card-widget > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer {
+    display: inline-block;
+    margin-top: -2px;
+    font-family: Arial;
+    font-size: 18px;
+    color: #8e8e8e;
+    vertical-align: top;
+}
+
+div.list-card-widget > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.domIcon {
+    margin-right: 6px;
+    padding: 0 5px 0 5px;
+    border: 1px solid #8e8e8e;
+    color: #8e8e8e;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+    line-height: 15px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+div.list-card-widget.hasCC > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconCC {
+    display: inline-block;
+    margin-top: 3px;
+    height: 20px;
+    width: 25px;
+    border: 0px;
+    background: url("icons/1280_720/cc-disabled.png") no-repeat;
+}
+
+div.list-card-widget.hasDVS > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconDVS {
+    display: inline-block;
+    margin-top: 3px;
+    height: 20px;
+    width: 35px;
+    border: 0px;
+    background: url("icons/1280_720/dv-disabled.png") no-repeat;
+}
+
+div.list-card-widget.isFirstRun > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconFirstRun {
+    display: inline-block;
+    height: 17px;
+    width: 34px;
+    border: 0px;
+    background: url("icons/1280_720/v2/new-disabled.png") no-repeat;
+}
+
+div.list-card-widget.isFirstRunFrench > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconFirstRun {
+    display: inline-block;
+    height: 17px;
+    width: 61px;
+    border: 0px;
+    background: url("icons/1280_720/v2/new-disabled_fr.png") no-repeat;
+}
+
+div.list-card-widget.hasRating > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconRating {
+    display: inline-block;
+}
+
+div.list-card-widget.hasRating > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconHD,
+div.list-card-widget.isHD > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconHD {
+    display: inline-block;
+}
+
+div.list-card-widget.isHDR > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconHDR {
+    display: inline-block;
+    height: 16px;
+    width: 40px;
+    border: 0px;
+    background: url("antclient://clas@theme/library/css/themes/clas/icons/1280_720/guide_icon_hdr_disabled.png") no-repeat;
+}
+
+div.list-card-widget.isUHD > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconUHD {
+    display: inline-block;
+    height: 16px;
+    width: 50px;
+    border: 0px;
+    background: url("antclient://clas@theme/library/css/themes/clas/icons/1280_720/guide_icon_uhd_disabled.png") no-repeat;
+}
+
+div.list-card-widget > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.domIconInverted {
+    background-color: #8e8e8e;
+    color: #f1f1f1;
+}
+
+div.list-card-widget > div.divHeader > div.domDateContainer {
+    position: absolute;
+    margin-bottom: -2px;
+    bottom: 0px;
+    right: 20px;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 20px;
+    color: #8e8e8e;
+	text-transform: uppercase;
+}
+
+div.list-card-widget > div.divHeader > div.domDateContainer.expired {
+    color: #54d4dc;
+    font-weight: bold;
+}
+
+div.list-card-widget > div.divBody {
+    display: none;
+    position: relative;
+    height: 127px;
+    min-height: 127px;
+    max-height: 127px;
+    padding: 20px 20px 10px 20px;
+    box-sizing: inherit;
+}
+
+div.list-card-widget.expanded > div.divBody {
+    display: block;
+}
+
+div.list-card-widget > div.divBody > div.domSynopsisContainer {
+    font-family: Arial;
+    font-size: 20px;
+    color: #8e8e8e;
+    line-height: 27px;
+    margin: -2px 0 20px 0;
+    max-height: 56px;
+    height: 56px;
+    overflow: hidden;
+}
+
+div.list-card-widget > div.divBody > div.domButtonContainer {
+    height: 54px;
+}
+
+div.list-card-widget > div.divBody > div.domButtonContainer div.domButton {
+    position: relative;
+    display: inline-block;
+    min-width: 100px;
+    max-width: 300px;
+    overflow: hidden;
+    padding: 0 20px 0 20px;
+    height: 54px;
+    line-height: 54px;
+    border: 2px solid #8e8e8e;
+
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    text-overflow: clip;
+    color: #f1f1f1;
+}
+
+div.list-card-widget.highlight > div.divBody > div.domButtonContainer div.domButton.highlight {
+    border-color: #2d7787;
+    background-color: #2d7787;
+}
+
+div.list-card-widget > div.divBody > div.domButtonContainer > div.domButtonsLeft {
+    display: inline-block;
+    float: left;
+}
+
+div.list-card-widget > div.divBody > div.domButtonContainer > div.domButtonsLeft > div.domButton {
+    margin: 0 16px 0 0;
+}
+
+div.list-card-widget > div.divBody > div.domButtonContainer > div.domButtonsRight {
+    display: inline-block;
+    float: right;
+}
+
+div.list-card-widget > div.divBody > div.domButtonContainer > div.domButtonsRight > div.domButton {
+    margin: 0 0 0 16px;
+}
+
+div.list-card-widget > div.divFooter {
+    position: relative;
+    height: 3px;
+    min-height: 3px;
+    max-height: 3px;
+    padding: 7px 20px 7px 20px;
+    box-sizing: inherit;
+}
+
+div.list-card-widget > div.divFooter > div.domBookmarkBar {
+    height: 3px;
+    width: 756px;
+    background-color: #8e8e8e;
+    display: none;
+}
+
+div.list-card-widget.hasBookmark > div.divFooter > div.domBookmarkBar {
+    display: block;
+}
+
+div.list-card-widget > div.divFooter > div.domBookmarkBar > div.domBookmarkProgress {
+    height: 3px;
+    background-color: #ffc03f;
+}
