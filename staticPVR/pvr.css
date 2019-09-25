@@ -2,17 +2,17 @@ body {
     font-family: Arial;
     color: #fff;
     width: 1280px;
-    height: 720px;
+    height: 640px;
     margin: 0 auto;
     position: relative;
-    /*background: #6A6A6A url('antclient://clas@theme/library/css/themes/clas/images/1280_720/generic_rtn_background.jpg') no-repeat center top;    */
+    overflow: hidden;
     background: #6A6A6A url('icons/1280_720/generic_rtn_background.jpg') no-repeat center top;
 }
 
 body > div.list {
     position: absolute;
     width: 1150px;
-    height: 655px;
+    height: 500px;
     margin: 50px 70px auto;
     overflow: hidden;
 }
@@ -76,15 +76,6 @@ body > div.list {
     vertical-align: middle;
     margin-left: 15px;
 }
-
-/*#PVR_View_List {
-    display: none;
-}
-
-/* list screen active 
-#PVR_View_List.active {
-    display: block;
-}*/
 
 /* list screen title */
 #PVR_View_List > div.domTitleContainer {
@@ -351,7 +342,6 @@ div.list-card-widget.isHDR > div.divHeader > .domDetailsIconsWrapper > ul.domIco
     height: 16px;
     width: 40px;
     border: 0px;
-    background: url("antclient://clas@theme/library/css/themes/clas/icons/1280_720/guide_icon_hdr_disabled.png") no-repeat;
 }
 
 div.list-card-widget.isUHD > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.iconUHD {
@@ -359,7 +349,6 @@ div.list-card-widget.isUHD > div.divHeader > .domDetailsIconsWrapper > ul.domIco
     height: 16px;
     width: 50px;
     border: 0px;
-    background: url("antclient://clas@theme/library/css/themes/clas/icons/1280_720/guide_icon_uhd_disabled.png") no-repeat;
 }
 
 div.list-card-widget > div.divHeader > .domDetailsIconsWrapper > ul.domIconContainer > li.domIconInverted {
