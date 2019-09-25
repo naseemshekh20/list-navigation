@@ -4,4 +4,4 @@
 
 - List view (Card view) showing program meta data - title, description, recording date, ratings and three buttons on each card below program title - Watch, More, Delete
 
-# Clone or download the repo and run index.html file on web browser
+- Clone or download the repo and run index.html file on web browser
