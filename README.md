@@ -6,4 +6,4 @@
 
 - Clone or download the repo and run index.html file on web browser
 
-Demo URL: https://naseemshekh20.github.io/pvr-navigation-test-app/
+Demo URL: https://naseemshekh20.github.io/pvr-navigation-test-app/staticPVR
