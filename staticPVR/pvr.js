@@ -70,6 +70,8 @@ function initialisePVR() {
 
                 // alert('down key pressed');
                 break;
+            case 8:
+                  history.back();             
         }
     }, false);
 
